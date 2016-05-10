@@ -17,7 +17,12 @@
 		E1123F921CDE3411001B064D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1123F901CDE3411001B064D /* LaunchScreen.storyboard */; };
 		E1123F9D1CDE3411001B064D /* VKFeedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1123F9C1CDE3411001B064D /* VKFeedTests.m */; };
 		E1123FA81CDE3411001B064D /* VKFeedUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1123FA71CDE3411001B064D /* VKFeedUITests.m */; };
-		E1F8827F1CE09AD100BCC225 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F8827E1CE09AD100BCC225 /* LoginViewController.m */; };
+		E14B5C5C1CE1587D004A3E38 /* NewsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14B5C5B1CE1587D004A3E38 /* NewsNavigationController.m */; };
+		E14BBF271CE0F02E00F11721 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14BBF261CE0F02E00F11721 /* LoginViewController.m */; };
+		E14BBF2A1CE0F03A00F11721 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14BBF291CE0F03A00F11721 /* NewsViewController.m */; };
+		E14BBF2D1CE0F04100F11721 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14BBF2C1CE0F04100F11721 /* DetailViewController.m */; };
+		E14BBF301CE0F97000F11721 /* WebAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14BBF2F1CE0F97000F11721 /* WebAuthorizationViewController.m */; };
+		E14BBF331CE1375100F11721 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E14BBF321CE1375100F11721 /* NetManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +63,19 @@
 		E1123FA31CDE3411001B064D /* VKFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1123FA71CDE3411001B064D /* VKFeedUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKFeedUITests.m; sourceTree = "<group>"; };
 		E1123FA91CDE3411001B064D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E1F8827D1CE09AD100BCC225 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		E1F8827E1CE09AD100BCC225 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E14B5C591CE14072004A3E38 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		E14B5C5A1CE1587D004A3E38 /* NewsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsNavigationController.h; sourceTree = "<group>"; };
+		E14B5C5B1CE1587D004A3E38 /* NewsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsNavigationController.m; sourceTree = "<group>"; };
+		E14BBF251CE0F02E00F11721 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E14BBF261CE0F02E00F11721 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E14BBF281CE0F03A00F11721 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		E14BBF291CE0F03A00F11721 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		E14BBF2B1CE0F04100F11721 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E14BBF2C1CE0F04100F11721 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E14BBF2E1CE0F97000F11721 /* WebAuthorizationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAuthorizationViewController.h; sourceTree = "<group>"; };
+		E14BBF2F1CE0F97000F11721 /* WebAuthorizationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAuthorizationViewController.m; sourceTree = "<group>"; };
+		E14BBF311CE1375100F11721 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
+		E14BBF321CE1375100F11721 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +177,9 @@
 			children = (
 				E1123F931CDE3411001B064D /* Info.plist */,
 				E1123F8B1CDE3411001B064D /* VKFeed.xcdatamodeld */,
+				E14BBF311CE1375100F11721 /* NetManager.h */,
+				E14BBF321CE1375100F11721 /* NetManager.m */,
+				E14B5C591CE14072004A3E38 /* constants.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,8 +201,16 @@
 				E1123F831CDE3411001B064D /* AppDelegate.m */,
 				E1123F851CDE3411001B064D /* ViewController.h */,
 				E1123F861CDE3411001B064D /* ViewController.m */,
-				E1F8827D1CE09AD100BCC225 /* LoginViewController.h */,
-				E1F8827E1CE09AD100BCC225 /* LoginViewController.m */,
+				E14BBF251CE0F02E00F11721 /* LoginViewController.h */,
+				E14BBF261CE0F02E00F11721 /* LoginViewController.m */,
+				E14BBF281CE0F03A00F11721 /* NewsViewController.h */,
+				E14BBF291CE0F03A00F11721 /* NewsViewController.m */,
+				E14BBF2B1CE0F04100F11721 /* DetailViewController.h */,
+				E14BBF2C1CE0F04100F11721 /* DetailViewController.m */,
+				E14BBF2E1CE0F97000F11721 /* WebAuthorizationViewController.h */,
+				E14BBF2F1CE0F97000F11721 /* WebAuthorizationViewController.m */,
+				E14B5C5A1CE1587D004A3E38 /* NewsNavigationController.h */,
+				E14B5C5B1CE1587D004A3E38 /* NewsNavigationController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -266,6 +293,7 @@
 				TargetAttributes = {
 					E1123F7B1CDE3411001B064D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = TVZRL98942;
 					};
 					E1123F971CDE3411001B064D = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -377,11 +405,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14B5C5C1CE1587D004A3E38 /* NewsNavigationController.m in Sources */,
 				E1123F8D1CDE3411001B064D /* VKFeed.xcdatamodeld in Sources */,
 				E1123F871CDE3411001B064D /* ViewController.m in Sources */,
+				E14BBF301CE0F97000F11721 /* WebAuthorizationViewController.m in Sources */,
 				E1123F841CDE3411001B064D /* AppDelegate.m in Sources */,
+				E14BBF2A1CE0F03A00F11721 /* NewsViewController.m in Sources */,
 				E1123F811CDE3411001B064D /* main.m in Sources */,
-				E1F8827F1CE09AD100BCC225 /* LoginViewController.m in Sources */,
+				E14BBF271CE0F02E00F11721 /* LoginViewController.m in Sources */,
+				E14BBF331CE1375100F11721 /* NetManager.m in Sources */,
+				E14BBF2D1CE0F04100F11721 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +558,7 @@
 			baseConfigurationReference = 451954575F35A71FEABC070C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VKFeed/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -538,6 +572,7 @@
 			baseConfigurationReference = 1B8685C92A700C82B1B31F71 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VKFeed/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

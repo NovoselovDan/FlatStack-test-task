@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "constants.h"
+
+@import SafariServices;
 
 @interface LoginViewController : UIViewController
 

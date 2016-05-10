@@ -5,6 +5,26 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Web Authorization View Controller-->
+        <scene sceneID="jYs-YC-mfc">
+            <objects>
+                <viewController id="9Io-3j-K4m" customClass="WebAuthorizationViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="N5V-3T-2gm">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                        <connections>
+                            <outlet property="delegate" destination="9Io-3j-K4m" id="hV9-lC-Jfi"/>
+                        </connections>
+                    </webView>
+                    <connections>
+                        <outlet property="webView" destination="N5V-3T-2gm" id="30B-7R-xML"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7UK-xg-PkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2935.5" y="-367"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="2Hr-Bc-Cjt">
             <objects>
@@ -14,36 +34,51 @@
                         <viewControllerLayoutGuide type="bottom" id="Vf9-MN-RyB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hjg-t7-Fet">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAt-2c-s3P">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Login with VK"/>
                                 <connections>
-                                    <action selector="authorize:" destination="7cy-Ck-ru0" eventType="touchUpInside" id="ZkL-Lx-Xq3"/>
+                                    <segue destination="9Io-3j-K4m" kind="show" id="Wb9-5n-j5E"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorize to watch neewsfed:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82S-Xr-64A">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gAt-2c-s3P" firstAttribute="centerY" secondItem="hjg-t7-Fet" secondAttribute="centerY" id="9sG-bb-3PF"/>
+                            <constraint firstItem="gAt-2c-s3P" firstAttribute="top" secondItem="82S-Xr-64A" secondAttribute="bottom" constant="8" id="DV8-sL-v28"/>
                             <constraint firstItem="gAt-2c-s3P" firstAttribute="centerX" secondItem="hjg-t7-Fet" secondAttribute="centerX" id="Dye-AD-vN0"/>
+                            <constraint firstItem="82S-Xr-64A" firstAttribute="centerX" secondItem="hjg-t7-Fet" secondAttribute="centerX" id="vpe-mG-JIZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="gAt-2c-s3P"/>
+                                <exclude reference="82S-Xr-64A"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="vpe-mG-JIZ"/>
                                 <exclude reference="9sG-bb-3PF"/>
+                                <exclude reference="DV8-sL-v28"/>
                                 <exclude reference="Dye-AD-vN0"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="gAt-2c-s3P"/>
+                                <include reference="82S-Xr-64A"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="vpe-mG-JIZ"/>
                                 <include reference="9sG-bb-3PF"/>
+                                <include reference="DV8-sL-v28"/>
                                 <include reference="Dye-AD-vN0"/>
                             </mask>
                         </variation>
@@ -62,11 +97,20 @@
             <objects>
                 <viewController id="x4L-MY-Hfx" customClass="NewsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7nJ-Lg-cJx">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="x4L-MY-Hfx" id="Yc8-m4-4hs"/>
+                            <outlet property="delegate" destination="x4L-MY-Hfx" id="Yyq-ht-GRg"/>
+                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="6TR-We-8sP"/>
+                    <navigationItem key="navigationItem" id="6TR-We-8sP">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="IAj-Be-lVc"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navItem" destination="6TR-We-8sP" id="cMy-Na-tJN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UR-ay-v9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +125,7 @@
                         <viewControllerLayoutGuide type="bottom" id="JCJ-0V-bMq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fub-3b-uax">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

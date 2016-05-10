@@ -10,4 +10,8 @@
 
 @interface NetManager : AFHTTPSessionManager
 
++ (NetManager *)sharedManager;
+
+- (NSURL *)getAuthURL;
+
 @end

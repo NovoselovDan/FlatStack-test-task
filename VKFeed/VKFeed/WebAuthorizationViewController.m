@@ -7,8 +7,10 @@
 //
 
 #import "WebAuthorizationViewController.h"
+#import "NetManager.h"
 
-@interface WebAuthorizationViewController ()
+@interface WebAuthorizationViewController () <UIWebViewDelegate>
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -16,22 +18,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    NSURLRequest *authRequest = [NSURLRequest requestWithURL:[[NetManager sharedManager] getAuthURL]];
+    [[self webView] loadRequest:authRequest];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"WebViewURL: %@", webView.request.URL.absoluteString);
+    NSLog(@"TOKEN = %@", [self getTokenFromURL:webView.request.URL]);
+    if ([webView.request.URL.absoluteString containsString:@"access_token="]) {
+        NSString *token = [self getTokenFromURL:webView.request.URL];
+        [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"access_token"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSString *)getTokenFromURL:(NSURL *)URL {
+    NSString *url = URL.absoluteString;
+    url = [url componentsSeparatedByString:@"#"].lastObject;
+    for (NSString *param in [url componentsSeparatedByString:@"&"]) {
+        if ([param containsString:@"access_token="]) {
+            return [param componentsSeparatedByString:@"="].lastObject;
+        }
+    }
+    return nil;
 }
-*/
-
 @end
